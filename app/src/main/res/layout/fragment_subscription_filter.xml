@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:backgroundTint="#00000000"
+    tools:context="ConnectionFilter">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ConnectionFilterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/FilterTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Filter by:"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/FrequencyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Delivery Frequency:"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FilterTitle2" />
+
+            <TextView
+                android:id="@+id/BudgetRangeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Budget Range:"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weeklyBtn" />
+
+            <TextView
+                android:id="@+id/budgetRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="10dp"
+                android:text="RM 00.00"
+                app:layout_constraintStart_toEndOf="@+id/BudgetRangeTitle"
+                app:layout_constraintTop_toBottomOf="@+id/monthlyBtn" />
+
+            <SeekBar
+                android:id="@+id/budgetSeekBar"
+                android:layout_width="250dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:indeterminateTint="#FFFFFF"
+                android:progressTint="#43A047"
+                android:thumbTint="#B3B3B3"
+                android:tickMarkTint="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BudgetRangeTitle" />
+
+            <TextView
+                android:id="@+id/productTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Products:"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/budgetSeekBar" />
+
+            <RadioButton
+                android:id="@+id/vegetablesRadioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Vegetables"
+                app:layout_constraintStart_toEndOf="@+id/fruitRadioButton2"
+                app:layout_constraintTop_toBottomOf="@+id/productTitle" />
+
+            <Button
+                android:id="@+id/FilterButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#43A047"
+                android:text="Filter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.489"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dairyRadioButton2" />
+
+            <RadioButton
+                android:id="@+id/meatRadioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Meat"
+                app:layout_constraintStart_toEndOf="@+id/vegetablesRadioButton2"
+                app:layout_constraintTop_toBottomOf="@+id/productTitle" />
+
+            <RadioButton
+                android:id="@+id/eggRadioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Eggs"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fruitRadioButton2" />
+
+            <RadioButton
+                android:id="@+id/dairyRadioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Dairy"
+                app:layout_constraintStart_toEndOf="@+id/eggRadioButton2"
+                app:layout_constraintTop_toBottomOf="@+id/vegetablesRadioButton2" />
+
+            <RadioButton
+                android:id="@+id/grainRadioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Grains"
+                app:layout_constraintStart_toEndOf="@+id/dairyRadioButton2"
+                app:layout_constraintTop_toBottomOf="@+id/meatRadioButton2" />
+
+            <RadioButton
+                android:id="@+id/fruitRadioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Fruits"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productTitle" />
+
+            <Button
+                android:id="@+id/weeklyBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#A0A0A0"
+                android:text="Weekly"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FrequencyTitle" />
+
+            <Button
+                android:id="@+id/monthlyBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#A0A0A0"
+                android:text="Monthly"
+                android:textColor="#000000"
+                app:layout_constraintStart_toEndOf="@+id/weeklyBtn"
+                app:layout_constraintTop_toBottomOf="@+id/FrequencyTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>
