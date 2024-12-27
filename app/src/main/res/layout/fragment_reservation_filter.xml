@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:backgroundTint="#00000000"
+    tools:context="ConnectionFilter">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ConnectionFilterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/FilterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Filter by:"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/TypeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Type of experience:"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FilterTitle" />
+
+            <SeekBar
+                android:id="@+id/priceSeekBar"
+                android:layout_width="250dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:indeterminateTint="#FFFFFF"
+                android:progressTint="#43A047"
+                android:thumbTint="#B3B3B3"
+                android:tickMarkTint="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/PriceRangeTitle" />
+
+            <TextView
+                android:id="@+id/priceShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="148dp"
+                android:layout_marginTop="10dp"
+                android:text="RM 00.00"
+                app:layout_constraintStart_toEndOf="@+id/PriceRangeTitle"
+                app:layout_constraintTop_toBottomOf="@+id/locationPicker" />
+
+            <TextView
+                android:id="@+id/DateRangeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Date Range:"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/experienceType" />
+
+
+            <Button
+                android:id="@+id/dateRangeStart"
+                style="?android:spinnerStyle"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="01 JAN 2024"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/DateRangeTitle" />
+
+            <Button
+                android:id="@+id/dateRangeStart2"
+                style="?android:spinnerStyle"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:onClick="openDataPicker"
+                android:text="01 JAN 2024"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/dateRangeStart"
+                app:layout_constraintTop_toBottomOf="@+id/DateRangeTitle" />
+
+            <TextView
+                android:id="@+id/LocationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Location:"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dateRangeStart" />
+
+            <TextView
+                android:id="@+id/PriceRangeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Price:"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationPicker" />
+
+            <Button
+                android:id="@+id/FilterButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#43A047"
+                android:text="Filter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/priceSeekBar"
+                android:onClick="openDataPicker"
+                />
+
+            <Spinner
+                android:id="@+id/experienceType"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TypeTitle"
+                />
+
+            <Spinner
+                android:id="@+id/locationPicker"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LocationTitle" />
+
+            <TextView
+                android:id="@+id/to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="to"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/dateRangeStart2"
+                app:layout_constraintStart_toEndOf="@+id/dateRangeStart"
+                app:layout_constraintTop_toBottomOf="@+id/DateRangeTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

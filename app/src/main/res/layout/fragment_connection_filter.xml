@@ -36,7 +36,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/FrequencyTitle"
+                android:id="@+id/TypeTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -58,10 +58,10 @@
                 android:thumbTint="#B3B3B3"
                 android:tickMarkTint="#000000"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/FrequencyTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/TypeTitle" />
 
             <SeekBar
-                android:id="@+id/budgetSeekBar"
+                android:id="@+id/priceSeekBar"
                 android:layout_width="250dp"
                 android:layout_height="17dp"
                 android:layout_marginStart="10dp"
@@ -71,7 +71,7 @@
                 android:thumbTint="#B3B3B3"
                 android:tickMarkTint="#000000"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/BudgetRangeTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/PriceRangeTitle" />
 
             <TextView
                 android:id="@+id/distanceFilter"
@@ -81,7 +81,7 @@
                 android:layout_marginTop="55dp"
                 android:text="     km"
                 app:layout_constraintBottom_toTopOf="@+id/distanceSeekBar"
-                app:layout_constraintStart_toEndOf="@+id/FrequencyTitle"
+                app:layout_constraintStart_toEndOf="@+id/TypeTitle"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
@@ -96,17 +96,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/grainRadioButton2" />
 
             <TextView
-                android:id="@+id/ratingFilter2"
+                android:id="@+id/priceShow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="145dp"
                 android:layout_marginTop="20dp"
                 android:text="RM 00.00"
-                app:layout_constraintStart_toEndOf="@+id/BudgetRangeTitle"
+                app:layout_constraintStart_toEndOf="@+id/PriceRangeTitle"
                 app:layout_constraintTop_toBottomOf="@+id/ratingFilter" />
 
             <TextView
-                android:id="@+id/ProductTitle"
+                android:id="@+id/DateRangeTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -118,7 +118,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/distanceSeekBar" />
 
             <TextView
-                android:id="@+id/ratingTitle"
+                android:id="@+id/LocationTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -130,7 +130,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/eggRadioButton2" />
 
             <TextView
-                android:id="@+id/BudgetRangeTitle"
+                android:id="@+id/PriceRangeTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -149,7 +149,7 @@
                 android:layout_marginTop="8dp"
                 android:text="Fruits"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ProductTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/DateRangeTitle" />
 
             <RadioButton
                 android:id="@+id/vegetablesRadioButton2"
@@ -159,7 +159,7 @@
                 android:layout_marginTop="8dp"
                 android:text="Vegetables"
                 app:layout_constraintStart_toEndOf="@+id/fruitRadioButton2"
-                app:layout_constraintTop_toBottomOf="@+id/ProductTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/DateRangeTitle" />
 
             <RadioButton
                 android:id="@+id/meatRadioButton2"
@@ -169,7 +169,7 @@
                 android:layout_marginTop="8dp"
                 android:text="Meat"
                 app:layout_constraintStart_toEndOf="@+id/vegetablesRadioButton2"
-                app:layout_constraintTop_toBottomOf="@+id/ProductTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/DateRangeTitle" />
 
             <RadioButton
                 android:id="@+id/eggRadioButton2"
@@ -215,7 +215,7 @@
                 android:transformPivotX="0dp"
                 android:transformPivotY="0dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ratingTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/LocationTitle" />
 
             <Button
                 android:id="@+id/FilterButton2"
@@ -227,7 +227,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/budgetSeekBar" />
+                app:layout_constraintTop_toBottomOf="@+id/priceSeekBar" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
