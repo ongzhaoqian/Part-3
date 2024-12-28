@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">CommunityCollaborationModule</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="payment_methods">
+        <item>TouchNGO e-Wallet</item>
+        <item>Credit Card</item>
+        <item>Debit Card</item>
+    </string-array>
+    -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#00000000"
     android:backgroundTint="#00000000"
-    tools:context="ConnectionFilter">
+    tools:context="ReservationFilter">
 
     <androidx.cardview.widget.CardView
         android:layout_width="340dp"
@@ -94,16 +94,17 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/DateRangeTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/DateRangeTitle"
+                android:onClick="openDatePicker"/>
 
             <Button
-                android:id="@+id/dateRangeStart2"
+                android:id="@+id/dateRangeEnd"
                 style="?android:spinnerStyle"
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
-                android:onClick="openDataPicker"
+                android:onClick="openDatePicker"
                 android:text="01 JAN 2024"
                 android:textColor="@color/black"
                 android:textSize="12sp"
@@ -145,7 +146,6 @@
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/priceSeekBar"
-                android:onClick="openDataPicker"
                 />
 
             <Spinner
@@ -175,7 +175,7 @@
                 android:text="to"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/dateRangeStart2"
+                app:layout_constraintEnd_toStartOf="@+id/dateRangeEnd"
                 app:layout_constraintStart_toEndOf="@+id/dateRangeStart"
                 app:layout_constraintTop_toBottomOf="@+id/DateRangeTitle" />
 
