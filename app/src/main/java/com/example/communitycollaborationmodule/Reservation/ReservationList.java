@@ -2,7 +2,7 @@ package com.example.communitycollaborationmodule.Reservation;
 
 public class ReservationList {
     private String imageName;
-    private int imageResourceId;
+    public int imageResourceId;
     private String reservation_name;
 
     private String description;
@@ -48,7 +48,7 @@ public class ReservationList {
     }
 
 
-    public int getImageResourceId(String imageResourceName,android.content.Context context) {
+    public int getImageResourceId(String imageResourceName, android.content.Context context) {
         int id=context.getResources().getIdentifier(imageResourceName,"drawable",context.getPackageName());
         return id;
     }

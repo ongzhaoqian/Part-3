@@ -29,7 +29,11 @@ public class ReservationPagerAdapter extends FragmentStateAdapter {
                     Log.d("ReservationPagerAdapter", "Creating ReservationDetail fragment");
                     Fragment fragment = new ReservationDetail();
                     Bundle bundle = new Bundle();
-                    bundle.putSerializable("reservationList", (Serializable) reservationList);
+                    bundle.putInt("image", reservationList.imageResourceId);
+                    bundle.putString("name", reservationList.getName());
+                    bundle.putString("description", reservationList.getDescription());
+                    bundle.putString("location", reservationList.getLocation());
+                    bundle.putFloat("rating", reservationList.getRating());
 
                     fragment.setArguments(bundle);
 

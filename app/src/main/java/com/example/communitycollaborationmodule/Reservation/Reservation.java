@@ -62,8 +62,11 @@ public class Reservation extends Fragment {
 
     public void onItemClicked(ReservationList reservationList){
         Log.d("Reservation", "Item clicked: " + reservationList.getName());
-        viewPagerAdapter.isDetailView=true;
+        Log.d("Reservation", "Item clicked: " + reservationList.getRating());
+        viewPagerAdapter.isDetailView = true;
         viewPagerAdapter.reservationList = reservationList;
+        viewPager2.setAdapter(viewPagerAdapter);
         viewPager2.setCurrentItem(0);
+        Log.d("Reservation","Hello");
     }
 }

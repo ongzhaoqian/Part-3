@@ -36,11 +36,10 @@ public class ReservationDetail extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         timeButton = view.findViewById(R.id.timeButton);
-        ReservationList reservationList = (ReservationList) getArguments().getSerializable("reservationList");
-        if (reservationList != null) {
-            Log.d("ReservationDetail", "Received data: " + reservationList.getName());
 
-        }
+        Log.d("ReservationDetail", "Received data: " + getArguments().getString("name"));
+
+
     }
 
     public void popTimePicker(View view)

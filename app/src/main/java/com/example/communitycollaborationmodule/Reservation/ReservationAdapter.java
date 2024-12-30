@@ -47,11 +47,12 @@ public class ReservationAdapter extends RecyclerView.Adapter<ReservationAdapter.
         holder.description.setText(reservationListList.getDescription());
         holder.ratingBar.setRating(rating);
         holder.price.setText(reservationListList.getPrices());
-        int imageResId=reservationListList.getImageResourceId(reservationListList.getImageName(),holder.itemView.getContext());
+        int imageResId=reservationListList.getImageResourceId(reservationListList.getImageName(), holder.itemView.getContext());
         holder.reservationImage.setImageResource(imageResId);
 
         holder.viewDetails.setOnClickListener(v -> {
             Log.d("ReservationAdapter", "View Details clicked for: " + reservationListList.getName());
+            reservationListList.imageResourceId = reservationListList.getImageResourceId(imageName, holder.itemView.getContext());
             reservation.onItemClicked(reservationListList);
 //            // When an item is clicked, pass the data to a new Fragment
 //            Fragment fragment = new ReservationDetail();
