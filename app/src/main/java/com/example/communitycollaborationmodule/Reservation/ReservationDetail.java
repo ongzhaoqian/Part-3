@@ -39,7 +39,6 @@ public class ReservationDetail extends Fragment {
 
         Log.d("ReservationDetail", "Received data: " + getArguments().getString("name"));
 
-
     }
 
     public void popTimePicker(View view)
