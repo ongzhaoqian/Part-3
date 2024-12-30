@@ -1,4 +1,4 @@
-package com.example.communitycollaborationmodule;
+package com.example.communitycollaborationmodule.Connection;
 
 
 
@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.communitycollaborationmodule.R;
 
 import java.util.List;
 

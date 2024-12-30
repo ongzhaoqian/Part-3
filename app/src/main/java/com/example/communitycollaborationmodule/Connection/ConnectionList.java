@@ -1,4 +1,4 @@
-package com.example.communitycollaborationmodule;
+package com.example.communitycollaborationmodule.Connection;
 
 
 

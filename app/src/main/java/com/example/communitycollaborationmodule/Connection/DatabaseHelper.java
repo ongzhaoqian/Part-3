@@ -1,4 +1,4 @@
-package com.example.communitycollaborationmodule;
+package com.example.communitycollaborationmodule.Connection;
 
 import android.content.Context;
 import android.database.Cursor;

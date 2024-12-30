@@ -1,4 +1,4 @@
-package com.example.communitycollaborationmodule;
+package com.example.communitycollaborationmodule.Reservation;
 
 public class Booking {
     private String title;

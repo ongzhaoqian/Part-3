@@ -5,7 +5,7 @@
     android:id="@+id/Constraint"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="ReservationDetail">
+    tools:context=".Reservation.ReservationDetail">
 
 
     <ImageView
@@ -136,12 +136,11 @@
         android:layout_marginTop="8dp"
         android:onClick="popTimePicker"
         android:text="00:00"
-        android:textSize="14sp"
         android:textColor="@color/black"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/selectTimeSlot"
-        app:strokeColor="#000000"
-       />
+        app:strokeColor="#000000" />
 
     <Button
         android:id="@+id/timeButton2"
@@ -176,6 +175,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="8dp"
+        android:entries="@array/no_participants"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NoParticipantTitle" />
 

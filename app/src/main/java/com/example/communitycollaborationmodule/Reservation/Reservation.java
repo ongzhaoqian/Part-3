@@ -1,18 +1,15 @@
-package com.example.communitycollaborationmodule;
+package com.example.communitycollaborationmodule.Reservation;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
-
-
-import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.communitycollaborationmodule.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class Reservation extends Fragment {
@@ -34,7 +31,7 @@ public class Reservation extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         tabLayout = view.findViewById(R.id.tab_layout);
         viewPager2 = view.findViewById(R.id.view_pager);
-        viewPagerAdapter = new ReservationPagerAdapter(requireActivity());
+        viewPagerAdapter = new ReservationPagerAdapter(requireActivity(), this);
         viewPager2.setAdapter(viewPagerAdapter);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -61,5 +58,12 @@ public class Reservation extends Fragment {
                 tabLayout.getTabAt(position).select();
             }
         });
+    }
+
+    public void onItemClicked(ReservationList reservationList){
+        Log.d("Reservation", "Item clicked: " + reservationList.getName());
+        viewPagerAdapter.isDetailView=true;
+        viewPagerAdapter.reservationList = reservationList;
+        viewPager2.setCurrentItem(0);
     }
 }

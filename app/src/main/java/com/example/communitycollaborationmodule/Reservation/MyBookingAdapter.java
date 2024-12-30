@@ -1,4 +1,4 @@
-package com.example.communitycollaborationmodule;
+package com.example.communitycollaborationmodule.Reservation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.communitycollaborationmodule.R;
 
 import java.util.List;
 

@@ -1,17 +1,17 @@
-package com.example.communitycollaborationmodule;
+package com.example.communitycollaborationmodule.Reservation;
 
+import android.app.TimePickerDialog;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import android.app.AlertDialog;
-import android.app.TimePickerDialog;
 import android.widget.Button;
 import android.widget.TimePicker;
+
+import androidx.fragment.app.Fragment;
+
+import com.example.communitycollaborationmodule.R;
 
 import java.util.Locale;
 
@@ -35,7 +35,12 @@ public class ReservationDetail extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        timeButton =view.findViewById(R.id.timeButton);
+        timeButton = view.findViewById(R.id.timeButton);
+        ReservationList reservationList = (ReservationList) getArguments().getSerializable("reservationList");
+        if (reservationList != null) {
+            Log.d("ReservationDetail", "Received data: " + reservationList.getName());
+
+        }
     }
 
     public void popTimePicker(View view)

@@ -1,7 +1,6 @@
-package com.example.communitycollaborationmodule;
+package com.example.communitycollaborationmodule.Connection;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +11,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import com.example.communitycollaborationmodule.R;
+
 import java.util.List;
 
 

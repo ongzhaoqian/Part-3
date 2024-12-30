@@ -1,12 +1,14 @@
 package com.example.communitycollaborationmodule;
+
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.communitycollaborationmodule.Connection;
-import com.example.communitycollaborationmodule.Reservation;
-import com.example.communitycollaborationmodule.Subscription;
+import com.example.communitycollaborationmodule.Connection.Connection;
+import com.example.communitycollaborationmodule.Reservation.Reservation;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
     public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity){
@@ -15,13 +17,12 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position){
+        Log.d("position",Integer.toString(position));
         switch (position){
             case 0:
                 return new Connection();
             case 1:
                 return new Reservation();
-            case 2:
-                return new Subscription();
             default:
                 return new Connection();
         }
@@ -29,6 +30,6 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount(){
-        return 3;
+        return 2;
     }
 }
