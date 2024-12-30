@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RatingBar;
+import android.widget.TextView;
 import android.widget.TimePicker;
 
 import androidx.fragment.app.Fragment;
@@ -39,6 +42,23 @@ public class ReservationDetail extends Fragment {
 
         Log.d("ReservationDetail", "Received data: " + getArguments().getString("name"));
 
+        int imageResId = getArguments().getInt("image");
+        String name = getArguments().getString("name");
+        String description = getArguments().getString("description");
+        String location = getArguments().getString("location");
+        float rating = getArguments().getFloat("rating");
+
+        ImageView reservationImage = view.findViewById(R.id.reservation_image);
+        TextView reservationTitle = view.findViewById(R.id.reservation_title);
+        TextView reservationDescription = view.findViewById(R.id.reservation_description);
+        RatingBar reservationRatingBar = view.findViewById(R.id.reservation_ratingBar);
+        TextView reservationLocation = view.findViewById(R.id.location);
+
+        reservationImage.setImageResource(imageResId);
+        reservationTitle.setText(name);
+        reservationDescription.setText(description);
+        reservationRatingBar.setRating(rating);
+        reservationLocation.setText(location);
     }
 
     public void popTimePicker(View view)

@@ -57,6 +57,8 @@
                 android:progressTint="#43A047"
                 android:thumbTint="#B3B3B3"
                 android:tickMarkTint="#000000"
+                android:progress="0"
+                android:max="100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/TypeTitle" />
 
@@ -70,6 +72,8 @@
                 android:progressTint="#43A047"
                 android:thumbTint="#B3B3B3"
                 android:tickMarkTint="#000000"
+                android:progress="0"
+                android:max="100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/PriceRangeTitle" />
 
@@ -89,11 +93,10 @@
                 android:id="@+id/ratingFilter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
                 android:layout_marginTop="45dp"
                 android:text="0 stars"
                 app:layout_constraintStart_toEndOf="@+id/filterRatingBar"
-                app:layout_constraintTop_toBottomOf="@+id/grainRadioButton2" />
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
             <TextView
                 android:id="@+id/priceShow"
@@ -127,7 +130,7 @@
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/eggRadioButton2" />
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
             <TextView
                 android:id="@+id/PriceRangeTitle"
@@ -141,65 +144,74 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/filterRatingBar" />
 
-            <RadioButton
-                android:id="@+id/fruitRadioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="8dp"
-                android:text="Fruits"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/DateRangeTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/DateRangeTitle">
 
-            <RadioButton
-                android:id="@+id/vegetablesRadioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="8dp"
-                android:text="Vegetables"
-                app:layout_constraintStart_toEndOf="@+id/fruitRadioButton2"
-                app:layout_constraintTop_toBottomOf="@+id/DateRangeTitle" />
+                <RadioButton
+                    android:id="@+id/fruitRadioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fruits"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioButton
-                android:id="@+id/meatRadioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="8dp"
-                android:text="Meat"
-                app:layout_constraintStart_toEndOf="@+id/vegetablesRadioButton2"
-                app:layout_constraintTop_toBottomOf="@+id/DateRangeTitle" />
+                <RadioButton
+                    android:id="@+id/vegetablesRadioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Vegetables"
+                    app:layout_constraintStart_toEndOf="@+id/fruitRadioButton2"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioButton
-                android:id="@+id/eggRadioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="8dp"
-                android:text="Eggs"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fruitRadioButton2" />
+                <RadioButton
+                    android:id="@+id/meatRadioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Meat"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vegetablesRadioButton2"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioButton
-                android:id="@+id/dairyRadioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="88dp"
-                android:layout_marginTop="8dp"
-                android:text="Dairy"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vegetablesRadioButton2" />
+                <RadioButton
+                    android:id="@+id/eggRadioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Eggs"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fruitRadioButton2" />
 
-            <RadioButton
-                android:id="@+id/grainRadioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="204dp"
-                android:layout_marginTop="8dp"
-                android:text="Grains"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/meatRadioButton2" />
+                <RadioButton
+                    android:id="@+id/dairyRadioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Dairy"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vegetablesRadioButton2" />
+
+                <RadioButton
+                    android:id="@+id/grainRadioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Grains"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/meatRadioButton2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <RatingBar
                 android:id="@+id/filterRatingBar"
@@ -214,6 +226,7 @@
                 android:scaleY=".75"
                 android:transformPivotX="0dp"
                 android:transformPivotY="0dp"
+                android:isIndicator="false"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/LocationTitle" />
 
