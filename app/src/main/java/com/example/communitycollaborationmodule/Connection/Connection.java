@@ -128,6 +128,7 @@ public class Connection extends Fragment implements ConnectionFilter.FilterListe
     @Override
     public void onFilterApplied(String selectedProduct, Float selectedDistance, Float selectedRating, String selectedPrice) {
         filteredList = new ArrayList<>();
+        // hi
 
         for (ConnectionList item : connectionList) {
             Log.d("Distance", selectedProduct + " " + selectedDistance + " " + selectedRating + " " + selectedPrice);
